@@ -4,8 +4,7 @@
 
 ### پیش‌نیازها
 
-1. **نصب ابزارهای توسعه**:
-   - در سیستم‌عامل اوبونتو (Ubuntu)، نیاز به نصب ابزارهای توسعه مانند `gcc`, `make` و `mysql-devel` دارید:
+1. **نصب ابزارهای توسعه**: در سیستم‌عامل اوبونتو (Ubuntu)، نیاز به نصب ابزارهای توسعه مانند `gcc`, `make` و `mysql-devel` دارید:
 ```bash
 sudo apt update
 sudo apt install build-essential libmysqlclient-dev
@@ -14,13 +13,13 @@ sudo apt install build-essential libmysqlclient-dev
 ### مراحل کامپایل و نصب:
 
 1. از پروژه clone بگیرید و به ریشه بروید.
-2.دستور ```make``` را اجرا کنید.
-3.فایل ساخته شده در پوشه بیلد را  (با فرمت .so) به پوشه پلاگین های mysql اضافه کنید.
+2. دستور ```make``` را اجرا کنید.
+3. فایل ساخته شده در پوشه بیلد را  (با فرمت .so) به پوشه پلاگین های mysql اضافه کنید.
 ```
 sudo cp build/linux/x86_64/gregorian_to_jalali.so /usr/lib64/mysql/plugin/
 ```
 
-4.بارگذاری پلاگین در MySQL، برای بارگذاری پلاگین در MySQL، دستور زیر را اجرا کنید:
+4. بارگذاری پلاگین در MySQL، برای بارگذاری پلاگین در MySQL، دستور زیر را اجرا کنید:
 ```
 CREATE FUNCTION gregorian_to_jalali
 RETURNS STRING
