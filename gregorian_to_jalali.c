@@ -49,7 +49,7 @@ date_struct gregorian_to_jalali_core(int year, int month, int day) {
     return result;
 }
 
-// تبدیل شمسی به میلادی
+
 date_struct jalali_to_gregorian_core(int year, int month, int day) {
     date_struct result;
 
@@ -102,7 +102,7 @@ date_struct jalali_to_gregorian_core(int year, int month, int day) {
     return result;
 }
 
-// تابع اولیه برای gregorian_to_jalali
+
 my_bool gregorian_to_jalali_init(UDF_INIT *initid, UDF_ARGS *args, char *message) {
     if (args->arg_count != 1 || args->arg_type[0] != STRING_RESULT) {
         strcpy(message, "Expected one DATE string argument in 'YYYY-MM-DD' format.");
@@ -129,7 +129,7 @@ char* gregorian_to_jalali(UDF_INIT *initid, UDF_ARGS *args,
 void gregorian_to_jalali_deinit(UDF_INIT *initid) {}
 
 
-// تابع اولیه برای jalali_to_gregorian
+
 my_bool jalali_to_gregorian_init(UDF_INIT *initid, UDF_ARGS *args, char *message) {
     if (args->arg_count != 1 || args->arg_type[0] != STRING_RESULT) {
         strcpy(message, "Expected one DATE string argument in 'YYYY-MM-DD' format.");
